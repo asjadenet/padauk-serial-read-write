@@ -156,7 +156,7 @@ void main() {
 
 
   //Setup interrupts
-  INTEGS = INTEGS_PB0_BOTH;//Trigger PA0 interrupt on falling edge
+  INTEGS = INTEGS_PB0_BOTH;//Trigger PB0 interrupt on falling edge
   INTEN = INTEN_PB0;		//Enable PB0 interrupt
   INTEN |= INTEN_TM2; //Enable Timer2 interrupt
   INTRQ = 0;					//Clear interrupt requests
