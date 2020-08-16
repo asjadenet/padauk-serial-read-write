@@ -5,5 +5,6 @@ Serial port read-write sample, based on the inexpensive Padauk microcontrollers
 
     git clone https://github.com/asjadenet/padauk-serial-read-write.git
     git submodule update --init --recursive
-	make program #or make DEVICE=PFS154 program
+	make program 
+	#or make DEVICE=PFS154 program
 	make run
