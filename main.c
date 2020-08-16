@@ -162,7 +162,7 @@ void main() {
   INTRQ = 0;					//Clear interrupt requests
   __engint();                 //Enable interrupt processing
 
-  serial_println("\nHello, press keys:\n", 19);
+  serial_println("\nHello, press keys:\n", 20);
 
   while(1)
   {
