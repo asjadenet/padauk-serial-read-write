@@ -37,7 +37,7 @@ volatile uint8_t counter = 0;  // bit counter
 
 volatile uint8_t byte_needs_processing = 0;
 
-#define CNT_BUF_MAX 10
+#define CNT_BUF_MAX 11
 volatile uint8_t cnt_buf[CNT_BUF_MAX];
 
 
@@ -82,10 +82,7 @@ void send_bit()
   }
 }
 
-int prep_char(int c) {
-  txdata = (c << 1) | 0x200;                    // Setup txdata with start and stop bit
-  return (c);
-}
+#define prep_char(c) ( txdata = (c << 1) | 0x200 )                    // Setup txdata with start and stop bit
 
 
 void send_char(char c)
