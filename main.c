@@ -32,7 +32,7 @@
 
 
 volatile uint16_t txdata;      // Serial data shift register
-volatile uint16_t rxdata = 0;  // Serial data shift register
+volatile uint16_t rxdata = 0;  // Serial data bit array
 volatile uint8_t counter = 0;  // bit counter
 
 volatile uint8_t byte_needs_processing = 0;
@@ -40,7 +40,6 @@ volatile uint8_t byte_needs_processing = 0;
 #define CNT_BUF_MAX 10
 volatile uint8_t cnt_buf[CNT_BUF_MAX];
 
-char buf [10];
 
 void interrupt(void) __interrupt(0) {
 if( INTRQ & INTRQ_TM2 ) //Timer2 interrupt request?
